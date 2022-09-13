@@ -1,0 +1,527 @@
+<html lang="fa" dir="rtl" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قالب HTML شخصی و رزومه">
+    <title>Alireza Zarei | علیرضا زارعی</title>
+    <meta type="description"
+          content="علیرضا زارعی ، توسعه دهنده لاراول و بک اند . شماره تماس : 09931337556 و ایمیل : aliwebto@gmail.com">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+          type="text/css"/>
+    <script>
+        if (localStorage.theme === "dark" || !"theme" in localStorage) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+    <style>
+        body {
+        font-family: Vazirmatn, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 antialiased text-slate-600 mx-4 sm:mx-6 mb-4 dark:bg-[#131313] dark:text-slate-400 selection:bg-[#007bff] selection:text-white">
+<div class="max-w-7xl mx-auto">
+    <header class="py-4">
+        <div class="flex justify-between items-center">
+            <button id="toggleMenu" data-toggle="false" class="z-20  hover:cursor-pointer sm:hidden">
+                <svg class="icon" id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg id="closeIcon" class="hidden icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="rtl:pr-2 ltr:pl-2 hidden sm:flex sm:items-center">
+                <!-- Add "index.html" if you are not using a local server or host -->
+                <!--                <nav>-->
+                <!--                    <ul class="flex gap-x-4">-->
+                <!--                        <li>-->
+                <!--                            <a href="#"-->
+                <!--                               class="font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"-->
+                <!--                               target="_blank">لینک خارجی-->
+                <!--                                اول</a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#"-->
+                <!--                               class="font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"-->
+                <!--                               target="_blank">لینک خارجی-->
+                <!--                                دوم</a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#"-->
+                <!--                               class="font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"-->
+                <!--                               target="_blank">لینک خارجی-->
+                <!--                                سوم</a>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <!--                </nav>-->
+            </div>
+            <div class="flex flex-row-reverse items-center rtl:gap-x-2 ltr:gap-x-1">
+                <button id="toggleDarkMode">
+                    <svg class="icon hidden" id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round" style="display: block;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon hidden" id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round" style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <!-- Add "en/index.html" if you are not using a local server or host -->
+            </div>
+        </div>
+        <!--        <nav id="mobileMenu" class="hidden mt-4 mb-2 rtl:mr-2.5 ltr:ml-2.5 sm:hidden">-->
+        <!--            <ul class="space-y-4 rtl:border-r ltr:border-l border-slate-200 dark:border-slate-700">-->
+        <!--                <li>-->
+        <!--                    <a href="#"-->
+        <!--                       class="text-slate-600 block rtl:pr-4 ltr:pl-4 text-base font-medium hover:text-slate-900 rtl:focus:border-r-2 ltr:focus:border-l-2 focus:border-slate-700 rtl:hover:border-r-2 ltr:hover:border-l-2 hover:border-slate-700 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:border-slate-200"-->
+        <!--                       target="_blank">لینک-->
+        <!--                        خارجی اول</a>-->
+        <!--                </li>-->
+        <!--                <li>-->
+        <!--                    <a href="#"-->
+        <!--                       class="text-slate-600 block rtl:pr-4 ltr:pl-4 text-base font-medium hover:text-slate-900 rtl:focus:border-r-2 ltr:focus:border-l-2 focus:border-slate-700 rtl:hover:border-r-2 ltr:hover:border-l-2 hover:border-slate-700 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:border-slate-200"-->
+        <!--                       target="_blank">لینک خارجی دوم</a>-->
+        <!--                </li>-->
+        <!--                <li>-->
+        <!--                    <a href="#"-->
+        <!--                       class="text-slate-600 block rtl:pr-4 ltr:pl-4 text-base font-medium hover:text-slate-900 rtl:focus:border-r-2 ltr:focus:border-l-2 focus:border-slate-700 rtl:hover:border-r-2 ltr:hover:border-l-2 hover:border-slate-700 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:border-slate-200"-->
+        <!--                       target="_blank">لینک خارجی سوم</a>-->
+        <!--                </li>-->
+        <!--            </ul>-->
+        <!--        </nav>-->
+    </header>
+    <div class="bg-white flex flex-col shadow-md rounded-3xl lg:flex-row dark:bg-zinc-900">
+        <aside class="bg-secondary rounded-3xl p-8 dark:bg-gray-800">
+            <div class=" flex flex-col justify-center items-center sticky top-8 lg:w-[260px]">
+                <!-- Profile Picture / تصویر پروفایل -->
+                <img src="assets/images/profile.jpg" alt="alireza zarei"
+                     style="max-height: 200px;border-radius: 50px 10px" class="max-w-[250px] mb-6">
+                <!-- Fullname / نام کامل -->
+                <h1 class="text-2xl text-slate-200 font-medium mb-2">علیرضا زارعی</h1>
+                <div class="flex flex-wrap justify-center mb-2">
+                    <!-- Tags / عناوین-->
+                    <span class="tag">developer</span>
+                    <span class="tag">junior backend developer</span>
+                </div>
+                <div class="flex flex-row-reverse mb-4">
+                    <!-- Instagram page / صفحه اینستاگرام -->
+                    <a href="https://instagram.com/aliwebto" target="_blank">
+                        <svg class="icon m-1 text-slate-300 hover:text-slate-100" xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <!-- Twitter page / صفحه توییتر -->
+                    <a href="https://twitter.com/aliwebto" target="_blank">
+                        <svg class="icon m-1 text-slate-300 hover:text-slate-100" xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <!-- Linkedin page / صفحه لینکدین -->
+                    <a href="https://www.linkedin.com/in/alireza-zarei-15796b159/" target="_blank">
+                        <svg class="icon m-1 text-slate-300 hover:text-slate-100" xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <!-- Github page / صفحه گیتهاب -->
+                    <a href="https://github.com/aliwebto" target="_blank">
+                        <img src="assets/images/github.png" class="icon m-1 text-slate-300 hover:text-slate-100">
+                    </a>
+                </div>
+                <!-- Personal Information / اطاعات شخصی -->
+                <table class="w-full text-slate-300 text-sm max-w-[250px] mb-2">
+                    <tbody>
+                    <tr class="flex justify-between mb-4">
+                        <td>جنسیت</td>
+                        <td>مرد</td>
+                    </tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>وضعیت تاهل</td>
+                        <td>مجرد</td>
+                    </tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>وضعیت سربازی</td>
+                        <td>معافیت تحصیلی</td>
+                    </tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>تاریخ تولد</td>
+                        <td>1383</td>
+                    </tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>ملیت</td>
+                        <td>ایرانی</td>
+                    </tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>موقعیت فعلی</td>
+                        <td>فارس، شیراز</td>
+                    </tr>
+                    <tr class="border-1 border-t border-slate-700 dark:border-slate-600 w-1/2 block mx-auto mb-4"></tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>موبایل</td>
+                        <td>09931337556</td>
+                    </tr>
+                    <tr class="flex justify-between mb-4">
+                        <td>ایمیل</td>
+                        <td>aliwebto@gmail.com</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--                &lt;!&ndash; Resume Pdf File Link / لینک فایل پی دی اف رزومه &ndash;&gt;-->
+                <!--                <a href="#" class="btn-cta"> دانلود فایل رزومه </a>-->
+            </div>
+        </aside>
+        <main class="bg-white p-6 lg:py-8 lg:px-10 rounded-3xl dark:bg-zinc-900/90">
+            <!-- About Me (Biography) / درباره من (بیوگرافی) -->
+            <div class="mb-10">
+                <div class="flex items-center text-slate-900 dark:text-slate-200 mb-2">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <h2 class="mx-2 text-2xl font-bold">
+                        بیوگرافی
+                    </h2>
+                </div>
+                <p>سلام . من علیرضا زارعی ،&nbsp; توسعه دهنده لاراول هستم . از سال 1396 فعالیت خودمو شروع کردم و از سال
+                    1399 به صورت حرفه ای این کار رو دنبال میکنم . به لاراول تقریبا تسلط کاملی دارم و به خوبی میتونم
+                    باهاش کار کنم . در کنار لاراول به حوزه دیتا ساینس هم علاقه دارم و فعلا تفریحانه بهش میپردازم .
+                </p>
+            </div>
+            <!-- Work Exprience / سوابق کاری -->
+            <div class="mb-10">
+                <div class="flex items-center mb-4 text-slate-900 dark:text-slate-200">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                    <h2 class="mx-2 text-2xl font-bold">
+                        سوابق شغلی
+                    </h2>
+                </div>
+                <!-- Sort: Newest to Oldest / مرتب سازی: جدیدترین تا قدیمی ترین -->
+                <ul class="exp-menu-container">
+                    <li class="exp-menu-item">
+                        <div class="relative top-[-0.35rem] rtl:pr-4 ltr:pl-4">
+                            <div class="text-xl font-semibold text-slate-700 mb-2 dark:text-slate-400">طراحی و توسعه بخش آزمون وب سایت
+                                <a href="https://exam.adlazma.com" rel="nofollow">عدل‌آزما</a>
+                            </div>
+                            <div class="text-sm text-slate-500">مرداد 1401 - شهریور 1401</div>
+                            <p>طراحی و توسعه پنل برگزاری آزمون سایت عدل‌آزما به صورت کاملا اختصاصی با laravel و livewire و دارای امکاناتی همچون تحصحیح و ایجاد خودکار آزمون با استفاده از laravel queue . </p>
+                        </div>
+                    </li>
+                    <li class="exp-menu-item">
+                        <div class="relative top-[-0.35rem] rtl:pr-4 ltr:pl-4">
+                            <div class="text-xl font-semibold text-slate-700 mb-2 dark:text-slate-400">طراحی و توسعه وب
+                                وب سایت <a href="https://pardeh24.com" rel="nofollow">پرده 24</a> برای آقای قربانی
+                            </div>
+                            <div class="text-sm text-slate-500">تیر 1401 - مرداد 1401</div>
+                            <p>طراحی کامل فرانت و توسعه بک اند به صورت اختصاصی با لاراول و livewire . وبسایت پرده 24 یک وب سایت فروشگاه آنلاین پرده هست و از جمله امکانات مهم این سایت میتوان به قیمت آپشنال محصول نسبت به آپشن های انتخابی اشاره کرد</p>
+                        </div>
+                    </li>
+                    <li class="exp-menu-item">
+                        <div class="relative top-[-0.35rem] rtl:pr-4 ltr:pl-4">
+                            <div class="text-xl font-semibold text-slate-700 mb-2 dark:text-slate-400">طراحی و توسعه وب
+                                سایت <a href="https://bookem.ir">بوکم</a> برای علی محمد پور
+                            </div>
+                            <div class="text-sm text-slate-500">بهمن 1399 - فروردین 1400</div>
+                            <p>توسعه وب سایت فروش کتاب بوکم با بیش از 1 میلیون دیتا با لاراول . بعد از یک سال تمرین کردن
+                                لاراول ، این اولین پروژه من با لاراول بود که باعث شد خیلی توی لاراول پیشرفت کنم . از
+                                جمله پیشرفت هایی که کردم میتوان به توانایی مدیریت حجم زیاد اطلاعات اشاره کرد . طراحی فرانت این سایت بر عهده من نبوده و فقط بک اند به صورت اختصاصی نوشته شده.</p>
+                        </div>
+                    </li>
+                    <li class="exp-menu-item">
+                        <div class="relative top-[-0.35rem] rtl:pr-4 ltr:pl-4">
+                            <div class="text-xl font-semibold text-slate-700 mb-2 dark:text-slate-400">تیم برنامه نویسی
+                                کاوب برای خودم
+                            </div>
+                            <div class="text-sm text-slate-500">فروردین 1398 - مرداد 1399<br></div>
+                            <p>استارتاپ کاوب ، تیم برنامه نویسی وب و اپلیکیشن بود که از سال 98 آغاز به کار و در مرداد 99
+                                به دلیل عدم توانایی در جذب هم تیمی به کار خود پایان داد .</p>
+                        </div>
+                    </li>
+                    <li class="exp-menu-item">
+                        <div class="relative top-[-0.35rem] rtl:pr-4 ltr:pl-4">
+                            <div class="text-xl font-semibold mb-2 text-slate-700 dark:text-slate-400">پنل کاربری وب
+                                سایت توان شو برای یوسف رستمی
+                            </div>
+                            <div class="text-sm text-slate-500">بهمن 1398 - اردیبهشت 1399</div>
+                            <p>طراحی و توسعه وب سایت توان شو . حوزه این وب سایت برگزاری وبینار و سمینار برای معلول های
+                                جسمی است . البته کارفرما از ایده خود منصرف شد و وب سایت رو تعطیل کردند. این پروژه اولین
+                                پروژه من با php بود و توانستم دانش php خودمو ارتقا بدم و به سطح بهتری برسم</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- The Skills / مهارت ها -->
+            <div class="mb-10">
+                <div class="flex items-center mb-4 text-slate-900 dark:text-slate-200">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <h2 class="mx-2 text-2xl font-bold">
+                        مهارت ها
+                    </h2>
+                </div>
+                <div class="flex flex-wrap">
+                    <span class="favorite-item">GIT / GITHUB</span>
+                    <span class="favorite-item">php</span>
+                    <span class="favorite-item">laravel</span>
+                    <span class="favorite-item">laravel api</span>
+                    <span class="favorite-item">javascript</span>
+                    <span class="favorite-item">data management</span>
+                    <span class="favorite-item">Technical advice</span>
+                </div>
+            </div>
+            <!-- The Languages / زبان ها -->
+            <div class="mb-10">
+                <div class="flex items-center mb-4 text-slate-900 dark:text-slate-200">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <h2 class="mx-2 text-2xl font-bold">
+                        زبان ها
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
+                    <div class="flex items-center justify-between">
+                        <span class="pl-2 font-medium text-slate-700 text-md dark:text-slate-400">فارسی</span>
+                        <ul class="dot-container">
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="pl-2 font-medium text-slate-700 text-md dark:text-slate-400">انگلیسی</span>
+                        <ul class="dot-container">
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot-null"></li>
+                            <li class="dot-null"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- The Favorites(Hobbies) / علاقه مندی ها -->
+            <div class="mb-10">
+                <div class="flex items-center mb-2 text-slate-900 dark:text-slate-200">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <h2 class="mx-2 text-2xl font-bold dark:text-slate-200">
+                        علاقه ها
+                    </h2>
+                </div>
+                <div class="flex flex-wrap">
+                    <span class="favorite-item">برنامه نویسی بک اند</span>
+                    <span class="favorite-item">دیتا ساینس</span>
+                    <span class="favorite-item"><span
+                            style="background-color: rgb(30 41 59/var(--tw-bg-opacity)); color: rgb(241 245 249/var(--tw-text-opacity)); font-size: 0.875rem;">دیتا اسکرپینگ</span><br></span>
+                    <span class="favorite-item">کار تیمی</span>
+                </div>
+            </div>
+            <!-- Work Samples / نمونه کارها -->
+            <div class="mb-4">
+                <div class="flex items-center mb-4 text-slate-900 dark:text-slate-200">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    <h2 class="mx-2 text-2xl font-bold ">
+                        نمونه کارها
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <a href="#pardeh24" class="btn-modal">
+                        <img data-href="#pardeh24" src="assets/images/pardeh24.png" class="rounded-[2rem]"
+                             alt="parde24 project" width="279px" height="279px">
+                    </a>
+                    <a href="#exam" class="btn-modal">
+                        <img data-href="#exam" src="assets/images/exam.jpg" class="rounded-[2rem]"
+                             alt="adlazma exam project" width="279px" height="279px">
+                    </a>
+                    <a href="#bookem" class="btn-modal">
+                        <img data-href="#bookem" src="assets/images/bookem.png" width="279px" height="279px" class="rounded-[2rem]"
+                             alt="bookem project">
+                    </a>
+                </div>
+                <!-- Modals -->
+                <div id="pardeh24" class="modal hidden fixed z-30 inset-0 overflow-y-auto">
+                    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                        <div class="modal-area fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity">
+                        </div>
+                        <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&ZeroWidthSpace;</span>
+                        <div class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+                            <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-zinc-800  dark:bg-zinc-900">
+                                <h3 class="text-xl font-bold text-slate-900 lg:text-2xl dark:text-slate-200">
+                                    وب سایت پرده 24
+                                </h3>
+                                <button type="button"
+                                        class="btn-close text-slate-400 bg-transparent hover:bg-slate-200 hover:text-slate-900 rounded-lg text-sm p-1.5 rtl:mr-auto ltr:ml-auto inline-flex items-center dark:hover:bg-slate-600 dark:hover:text-white"
+                                        data-modal-toggle="defaultModal">
+                                    <svg class="w-5 h-5 " fill="currentColor" viewBox="0 0 20 20"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-6 space-y-6 dark:bg-zinc-900">
+                                <img src="assets/images/pardeh24.png" class="rounded-[2rem]"
+                                     alt="A music streaming mobile app design">
+                                <p class="rtl:text-right ltr:text-left leading-relaxed text-slate-600 dark:text-slate-400">
+                                    طراحی کامل فرانت و توسعه بک اند به صورت اختصاصی با لاراول و livewire . وبسایت پرده 24 یک وب سایت فروشگاه آنلاین پرده هست و از جمله امکانات مهم این سایت میتوان به قیمت آپشنال محصول نسبت به آپشن های انتخابی اشاره کرد
+                                </p>
+                            </div>
+                            <div class="flex items-center p-6 space-x-2 rounded-b border-t border-slate-200 dark:border-zinc-800  dark:bg-zinc-900">
+                                <a href="https://pardeh24.com"
+                                   class="flex flex-row-reverse items-center text-white text-bold bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-5 py-3 text-base text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" target="_blank">
+                                    <p>مشاهده وب سایت</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="exam" class="modal hidden fixed z-30 inset-0 overflow-y-auto">
+                    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                        <div class="modal-area fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity">
+                        </div>
+                        <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&ZeroWidthSpace;</span>
+                        <div class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+                            <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-zinc-800  dark:bg-zinc-900">
+                                <h3 class="text-xl font-bold text-slate-900 lg:text-2xl dark:text-slate-200">
+                                    پنل آزمون وب سایت عدل‌آزما
+                                </h3>
+                                <button type="button"
+                                        class="btn-close text-slate-400 bg-transparent hover:bg-slate-200 hover:text-slate-900 rounded-lg text-sm p-1.5 rtl:mr-auto ltr:ml-auto inline-flex items-center dark:hover:bg-slate-600 dark:hover:text-white"
+                                        data-modal-toggle="defaultModal">
+                                    <svg class="w-5 h-5 " fill="currentColor" viewBox="0 0 20 20"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-6 space-y-6 dark:bg-zinc-900">
+                                <img src="assets/images/exam.jpg" class="rounded-[2rem]"
+                                     alt="A music streaming mobile app design">
+                                <p class="rtl:text-right ltr:text-left leading-relaxed text-slate-600 dark:text-slate-400">
+                                    طراحی و توسعه پنل برگزاری آزمون سایت عدل‌آزما به صورت کاملا اختصاصی با laravel و livewire و دارای امکاناتی همچون تحصحیح و ایجاد خودکار آزمون با استفاده از laravel queue .
+                                </p>
+                            </div>
+                            <div class="flex items-center p-6 space-x-2 rounded-b border-t border-slate-200 dark:border-zinc-800  dark:bg-zinc-900">
+                                <a href="https://exam.adlazma.com/"
+                                   class="flex flex-row-reverse items-center text-white text-bold bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-5 py-3 text-base text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" target="_blank">
+                                    <p>مشاهده وب سایت</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bookem" class="modal hidden fixed z-30 inset-0 overflow-y-auto">
+                    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                        <div class="modal-area fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity">
+                        </div>
+                        <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&ZeroWidthSpace;</span>
+                        <div class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+                            <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-zinc-800  dark:bg-zinc-900">
+                                <h3 class="text-xl font-bold text-slate-900 lg:text-2xl dark:text-slate-200">
+                                    وب سایت بوکم
+                                </h3>
+                                <button type="button"
+                                        class="btn-close text-slate-400 bg-transparent hover:bg-slate-200 hover:text-slate-900 rounded-lg text-sm p-1.5 rtl:mr-auto ltr:ml-auto inline-flex items-center dark:hover:bg-slate-600 dark:hover:text-white"
+                                        data-modal-toggle="defaultModal">
+                                    <svg class="w-5 h-5 " fill="currentColor" viewBox="0 0 20 20"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-6 space-y-6 dark:bg-zinc-900">
+                                <img src="assets/images/bookem.png" class="rounded-[2rem]"
+                                     alt="A music streaming mobile app design">
+                                <p class="rtl:text-right ltr:text-left leading-relaxed text-slate-600 dark:text-slate-400">
+                                    توسعه وب سایت فروش کتاب بوکم با بیش از 1 میلیون دیتا با لاراول . بعد از یک سال تمرین کردن لاراول ، این اولین پروژه من با لاراول بود که باعث شد خیلی توی لاراول پیشرفت کنم . از جمله پیشرفت هایی که کردم میتوان به توانایی مدیریت حجم زیاد اطلاعات اشاره کرد . طراحی فرانت این سایت بر عهده من نبوده و فقط بک اند به صورت اختصاصی نوشته شده.
+                                </p>
+                            </div>
+                            <div class="flex items-center p-6 space-x-2 rounded-b border-t border-slate-200 dark:border-zinc-800  dark:bg-zinc-900">
+                                <a href="https://bookem.ir"
+                                   class="flex flex-row-reverse items-center text-white text-bold bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-5 py-3 text-base text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900" target="_blank">
+                                    <p>مشاهده وب سایت</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="mx-auto text-center py-8">
+        <p class="text-slate-500 ltr">
+            Copyright © Alireza Zarei — All rights reserved.
+        </p>
+    </footer>
+</div>
+<script src="assets/js/main.min.js" defer></script>
+
+
+</body>
+</html>
